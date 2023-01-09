@@ -1,4 +1,10 @@
 import 'raf/polyfill'
+import {
+  RelayEnvironmentProvider,
+  loadQuery,
+  usePreloadedQuery,
+} from 'react-relay/hooks';
+import RelayEnvironment from "../../../packages/app/relay/RelayEnvironment"
 
 const fixReanimatedIssue = () => {
   // FIXME remove this once this reanimated fix gets released
@@ -30,7 +36,9 @@ function MyApp({ Component, pageProps }: AppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider>
+        <RelayEnvironmentProvider environment={RelayEnvironment}>
         <Component {...pageProps} />
+        </RelayEnvironmentProvider>
       </Provider>
     </>
   )

@@ -18,6 +18,10 @@ const nextConfig = {
   // once that gets fixed, set this back to true
   reactStrictMode: false,
   webpack5: true,
+  webpack: (config) => {
+    config.resolve.fallback = { fs: false };
+    return config;
+  },
   experimental: {
     forceSwcTransforms: true,
     swcPlugins: [[require.resolve('./plugins/swc_plugin_reanimated.wasm')]],
