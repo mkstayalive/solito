@@ -6,8 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "codegen": "graphql-codegen"
+    "lint": "next lint"
+    
   },
   "dependencies": {
     "@expo/next-adapter": "^4.0.12",

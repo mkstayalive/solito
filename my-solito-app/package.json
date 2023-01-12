@@ -21,7 +21,10 @@
   },
   "scripts": {
     "native": "cd apps/expo && expo start",
-    "web": "cd apps/next && yarn next"
+    "web": "cd apps/next && yarn next",
+    "codegen": "graphql-codegen"
   },
-  "dependencies": {}
+  "dependencies": {
+    "ts-node": "^10.9.1"
+  }
 }
