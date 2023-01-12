@@ -1,0 +1,12 @@
+schema: "https://api.lens.dev/"
+documents: "graphql/*.graphql"
+generates:
+  graphql/genererated.ts:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-query
+      - fragment-matcher
+
+    config:
+     -dedupeFragments: true
